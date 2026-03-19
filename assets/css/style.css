@@ -10,3 +10,104 @@ html {
 body {
   font-size: 1.6rem;
 }
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* common */
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  width: 1170px;
+  max-width: calc(
+    100% - 48px
+  ); /* Thêm dòng này để web không bị vỡ trên màn hình nhỏ */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0px 16px;
+  min-width: 118px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: black;
+}
+
+/* header */
+
+.header {
+  background: #fce6aa;
+}
+.header.fixed {
+  /* Giúp thanh menu bám sát vào phần trên của trang khi cuộn xuống */
+  position: sticky;
+  top: -28px;
+}
+
+.header .body {
+  display: flex;
+  /* Căn hàng nav theo chiều ngang */
+  align-items: center;
+  /* Tạo khoảng cách các phần tử với lề */
+  padding: 36px 0 8px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav {
+  margin-left: auto;
+}
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  /* Căn nội dung giữa box chứa */
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  /* Chiều cao dòng */
+  line-height: 28px;
+  padding: 8px 21px;
+}
+
+.nav li.active a,
+.nav a:hover {
+  color: black;
+  text-align: center;
+  font-size: 1.6rem;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+  line-height: 28px;
+}
+
+.nav li.active a::after {
+  /* Căn phần tử theo phần tử gần nhất */
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: black;
+}
+
+.header .btn {
+  min-width: 144px;
+}
+
+.header .action {
+  /* Tạo khoảng cách nút sign up với các nút nav */
+  margin-left: 49px;
+}
