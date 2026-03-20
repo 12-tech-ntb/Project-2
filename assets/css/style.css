@@ -37,19 +37,24 @@ a {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
-  border-radius: 24.5px;
+  border-radius: 999px;
   background: black;
+}
+.btn:hover {
+  opacity: 0.9;
 }
 
 /* header */
 
 .header {
-  background: #fce6aa;
+  background: #f4e8c8;
 }
 .header.fixed {
   /* Giúp thanh menu bám sát vào phần trên của trang khi cuộn xuống */
   position: sticky;
   top: -28px;
+  /* Giúp cho bức ảnh ko che đi header (Bắt buộc phải có position thì mới dùng được z-index) */
+  z-index: 1;
 }
 
 .header .body {
@@ -110,4 +115,185 @@ a {
 .header .action {
   /* Tạo khoảng cách nút sign up với các nút nav */
   margin-left: 49px;
+}
+/* ================================= Hero ================================= */
+.hero {
+  /* Dùng padding để tạo khoảng cách và đổ được nền thay cho margin */
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* ================================= Hero left ================================= */
+
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+
+.hero .content-block {
+  width: 52%;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  /* Dùng object-fit để không bị vỡ ảnh */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-sumary {
+  padding: 24px;
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  /* Tạo hiệu ứng độ bóng */
+  box-shadow: 0px 16px 32px 0px rgb(0, 0, 0, 0.45);
+}
+
+.hero-sumary .item {
+  display: flex;
+  align-items: center;
+}
+/* Tác động vào 1 class item nằm đằng sau 1 class item khác */
+.hero-sumary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-sumary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  /* Căn giữa trục ngang và trục thẳng đứng */
+  align-items: center;
+  justify-content: center;
+  background-color: #fff9e8;
+}
+
+.hero-sumary .icon2 {
+  background-color: #fcefff;
+}
+
+.hero-sumary .icon3 {
+  background-color: #ebeaff;
+}
+
+.hero-sumary .info {
+  margin-left: 16px;
+}
+
+.hero-sumary .info {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.hero-sumary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+/* ================================ Hero right ================================= */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+
+/* Đặt biến trong root để dễ dàng sửa phông Sen và màu của nút a*/
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67;
+}
+
+.hero .cta-group {
+  display: flex;
+  margin-top: 38px;
+  align-items: center;
+}
+
+.hero-cta {
+  min-width: 180px;
+  background-color: var(--primary-color);
+  line-height: 64px;
+}
+.hero .watch-video {
+  align-items: center;
+  margin-left: 28px;
+  boder: none;
+  /* Để nền nút watch video trong suốt */
+  background: transparent;
+  display: flex;
+  /* Tạo hình bàn tay khi người dung đưa chuột vào nút bấm */
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .watch-video span {
+  margin-left: 14px;
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.67;
+}
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats {
+  margin-top: 8px;
+}
+
+.hero .stats strong {
+  margin-right: 15px;
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.23;
+}
+/* Tác động vào thẻ strong thứ 2 */
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }
