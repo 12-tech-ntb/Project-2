@@ -1,3 +1,71 @@
+/* ==================== Responsive cho Điện thoại ==================== */
+/* @media giúp web tự điều chỉnh thích hợp với thiết bị */
+@media (max-width: 768px) {
+  /* 1. Header: Cho logo và các nút căn chỉnh lại */
+  .header .body {
+    flex-direction: column; /* Xếp dọc Logo, Nav và Action */
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav {
+    margin-left: 0; /* Bỏ margin-left: auto để căn giữa */
+  }
+
+  .header .action {
+    margin-left: 0;
+  }
+
+  /* 2. Hero Section: Quan trọng nhất để hết đè nhau */
+  .hero .body {
+    flex-direction: column; /* Ảnh trên, chữ dưới */
+  }
+
+  .hero .media-block,
+  .hero .content-block {
+    width: 100%; /* Chiếm hết chiều ngang */
+    padding-left: 0; /* Bỏ padding cũ của Desktop */
+  }
+
+  .hero .media-block .img {
+    width: 100%; /* Ảnh tự co giãn theo màn hình */
+    height: auto; /* Giữ tỉ lệ ảnh */
+  }
+
+  .hero .content-block {
+    padding-top: 30px;
+    text-align: center; /* Căn giữa chữ cho đẹp trên mobile */
+  }
+
+  .hero .cta-group {
+    justify-content: center; /* Căn giữa các nút bấm */
+  }
+
+  /* 3. Popular Courses: Chuyển danh sách khóa học thành 1 cột */
+  .popular .course-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .popular-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .popular-top .desc {
+    width: 100%; /* Bỏ độ rộng cố định 458px */
+  }
+
+  /* 4. Điều chỉnh các con số thống kê (Stats) */
+  .hero .stats strong:nth-child(2) {
+    margin-left: 0;
+    display: block; /* Xuống dòng cho thoáng */
+    margin-top: 10px;
+  }
+}
+
+/* ============================ Web for computer ==================================== */
 * {
   box-sizing: border-box;
 }
@@ -36,6 +104,24 @@ a {
   ); /* Thêm dòng này để web không bị vỡ trên màn hình nhỏ */
   margin-left: auto;
   margin-right: auto;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  /* Để đếm dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Với thẻ p quá 2 dòng mới hiện thị dấu 3 chấm */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/* Tránh phá vỡ giao diện */
+.break-all {
+  word-break: break-all;
 }
 
 .btn {
@@ -385,6 +471,8 @@ a {
 } */
 
 .popular .course-item {
+  /* Đặt flex bằng 1 để giúp cho 3 item có chiều rộng bằng nhau */
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -453,71 +541,4 @@ a {
   line-height: 1.67;
   /* Độ rộng của nét text */
   font-weight: 600;
-}
-
-/* ==================== Responsive cho Điện thoại ==================== */
-/* @media giúp web tự điều chỉnh thích hợp với thiết bị */
-@media (max-width: 768px) {
-  /* 1. Header: Cho logo và các nút căn chỉnh lại */
-  .header .body {
-    flex-direction: column; /* Xếp dọc Logo, Nav và Action */
-    gap: 20px;
-    padding: 20px 0;
-  }
-
-  .nav {
-    margin-left: 0; /* Bỏ margin-left: auto để căn giữa */
-  }
-
-  .header .action {
-    margin-left: 0;
-  }
-
-  /* 2. Hero Section: Quan trọng nhất để hết đè nhau */
-  .hero .body {
-    flex-direction: column; /* Ảnh trên, chữ dưới */
-  }
-
-  .hero .media-block,
-  .hero .content-block {
-    width: 100%; /* Chiếm hết chiều ngang */
-    padding-left: 0; /* Bỏ padding cũ của Desktop */
-  }
-
-  .hero .media-block .img {
-    width: 100%; /* Ảnh tự co giãn theo màn hình */
-    height: auto; /* Giữ tỉ lệ ảnh */
-  }
-
-  .hero .content-block {
-    padding-top: 30px;
-    text-align: center; /* Căn giữa chữ cho đẹp trên mobile */
-  }
-
-  .hero .cta-group {
-    justify-content: center; /* Căn giữa các nút bấm */
-  }
-
-  /* 3. Popular Courses: Chuyển danh sách khóa học thành 1 cột */
-  .popular .course-list {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .popular-top {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .popular-top .desc {
-    width: 100%; /* Bỏ độ rộng cố định 458px */
-  }
-
-  /* 4. Điều chỉnh các con số thống kê (Stats) */
-  .hero .stats strong:nth-child(2) {
-    margin-left: 0;
-    display: block; /* Xuống dòng cho thoáng */
-    margin-top: 10px;
-  }
 }
