@@ -88,6 +88,11 @@
     <meta name="msapplication-TileImage" content="./ico/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <title>Figma to HTML</title>
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body style="height: 10000px">
     <!-- header -->
@@ -101,16 +106,16 @@
           <nav class="nav">
             <ul>
               <li class="active">
-                <a href="#!">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <a href="#!">Courses</a>
+                <a href="#courses">Courses</a>
               </li>
               <li>
-                <a href="#!">Pricing</a>
+                <a href="#pricing">Pricing</a>
               </li>
               <li>
-                <a href="#!">Reviews</a>
+                <a href="#reviews">Reviews</a>
               </li>
             </ul>
           </nav>
@@ -134,7 +139,7 @@
         <div class="main-content">
           <div class="body">
             <!-- Hero left -->
-            <div class="media-block">
+            <div id="home"  class="media-block">
               <img
                 src="./assets/img/ntb.jpg"
                 alt="Learn without limits and spread knowledge"
@@ -202,9 +207,9 @@
         </div>
       </div>
       <!-- popular -->
-      <div class="popular">
+      <div id="courses" class="popular">
         <div class="main-content">
-          <div class="popular-top">
+          <div id="pricing" class="popular-top">
             <!-- Khối bên trái -->
             <div class="info">
               <h2 class="heading-lv2">Our popular courses</h2>
@@ -318,7 +323,7 @@
       </div>
 
       <!-- Feedback -->
-      <div class="feedback">
+      <div id="reviews" class="feedback">
         <div class="main-content">
           <div class="feedback-list">
 
@@ -404,7 +409,7 @@
         </div>
       </div>
 
-      <!-- features -->
+      <!-- features 1 -->
        <div class="features">
         <div class="main-content">
           <div class="body">
@@ -421,6 +426,56 @@
           </div>
         </div>
        </div>
+            <!-- features 2-->
+       <div class="features features-2nd">
+        <div class="main-content">
+          <div class="body">
+            <div class="images">
+              <img src="./assets/img/Rectangle 11.png" alt="Take the next step toward your personal and professional goals with Lesson.">
+            </div>
+            <div class="content">
+              <h2 class="heading-lv2">Take the next step toward your personal and professional goals with Lesson.</h2>
+              <p class="desc">Take the next step toward. Join now to receive personalized  and more recommendations from the full Coursera catalog.</p>
+              <a href="#!" class="btn cta-btn">Join now</a>
+            </div>
+          </div>
+        </div>
+       </div>
+       <!-- Blog -->
+        <div class="blog">
+          <div class="main-content">
+            <div class="blog-top">
+              <h2 class="heading-lv2">Our blog</h2>
+              <p class="desc">Read our regular travel blog and know the latest update of tour and travel</p>
+            </div>
+            <div class="blog-list">
+              <!-- item1 -->
+                <div class="item"><a href="#!"><img src="./assets/img/study1.png" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+                <div class="info">
+                  <span class="date">21 November 2021</span>
+                  <a href="#!"><h3 class="title">How to become a pro web designer in 2022 and get remot job?</h3></a>
+                  <a href="" class="btn">Read More</a>
+                </div>
+              </div>
+               <!-- item2 -->
+              <div class="item"><a href="#!"><img src="./assets/img/study2.png" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+             <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!"><h3 class="title">How to become a pro web designer in 2022 and get remot job?</h3></a>
+                <a href="" class="btn">Read More</a>
+             </div>
+            </div>
+               <!-- item3 -->
+              <div class="item"><a href="#!"><img src="./assets/img/study3.png" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!"><h3 class="title">How to become a pro web designer in 2022 and get remot job?</h3></a>
+                <a href="" class="btn">Read More</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
     </main>
   </body>
 </html>
