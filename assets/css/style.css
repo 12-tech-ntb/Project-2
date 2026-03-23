@@ -1,67 +1,132 @@
 /* ==================== Responsive cho Điện thoại ==================== */
 /* @media giúp web tự điều chỉnh thích hợp với thiết bị */
+/* ==================== Responsive cho Thiết bị Di động ==================== */
+
 @media (max-width: 768px) {
-  /* 1. Header: Cho logo và các nút căn chỉnh lại */
+  /* 1. Typography: Giảm kích thước chữ tiêu đề */
+  .hero .heading {
+    font-size: 3.5rem; /* Giảm từ 5.8 xuống */
+    text-align: center;
+  }
+
+  .heading-lv2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  /* 2. Header: Đưa menu về dạng dọc hoặc ẩn bớt */
   .header .body {
-    flex-direction: column; /* Xếp dọc Logo, Nav và Action */
-    gap: 20px;
+    flex-direction: column;
     padding: 20px 0;
   }
 
-  .nav {
-    margin-left: 0; /* Bỏ margin-left: auto để căn giữa */
+  .nav ul {
+    flex-wrap: wrap; /* Cho phép các mục menu xuống dòng nếu thiếu chỗ */
+    justify-content: center;
+    padding: 0;
   }
 
   .header .action {
     margin-left: 0;
+    margin-top: 20px;
   }
 
-  /* 2. Hero Section: Quan trọng nhất để hết đè nhau */
+  /* 3. Hero Section */
   .hero .body {
-    flex-direction: column; /* Ảnh trên, chữ dưới */
+    flex-direction: column-reverse; /* Đưa chữ lên trên, ảnh xuống dưới cho dễ đọc */
   }
 
-  .hero .media-block,
   .hero .content-block {
-    width: 100%; /* Chiếm hết chiều ngang */
-    padding-left: 0; /* Bỏ padding cũ của Desktop */
+    width: 100%;
+    padding-left: 0; /* Bỏ padding 130px cũ */
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .hero .media-block {
+    width: 100%;
+    margin-top: 40px;
   }
 
   .hero .media-block .img {
-    width: 100%; /* Ảnh tự co giãn theo màn hình */
-    height: auto; /* Giữ tỉ lệ ảnh */
+    width: 100%;
+    height: 400px; /* Thu nhỏ chiều cao ảnh trên mobile */
   }
 
-  .hero .content-block {
-    padding-top: 30px;
-    text-align: center; /* Căn giữa chữ cho đẹp trên mobile */
+  /* Xử lý các khối summary bay lơ lửng */
+  .hero .hero-sumary {
+    position: static; /* Không cho bay nữa, để nó nằm dưới ảnh */
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: none;
+    border: 1px solid #eee;
   }
 
   .hero .cta-group {
-    justify-content: center; /* Căn giữa các nút bấm */
-  }
-
-  /* 3. Popular Courses: Chuyển danh sách khóa học thành 1 cột */
-  .popular .course-list {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .popular-top {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Nút bấm xếp dọc */
     gap: 20px;
   }
 
-  .popular-top .desc {
-    width: 100%; /* Bỏ độ rộng cố định 458px */
+  .hero .watch-video {
+    margin-left: 0;
   }
 
-  /* 4. Điều chỉnh các con số thống kê (Stats) */
-  .hero .stats strong:nth-child(2) {
-    margin-left: 0;
-    display: block; /* Xuống dòng cho thoáng */
-    margin-top: 10px;
+  /* 4. Popular Courses & Blog: Chuyển sang 1 cột */
+  .popular .course-list,
+  .blog .blog-list {
+    flex-direction: column;
+  }
+
+  .popular .course-item,
+  .blog .item {
+    width: 100%;
+  }
+
+  /* 5. Features */
+  .features .body,
+  .features-2nd .body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features .images,
+  .features-2nd .images img {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .features .content,
+  .features-2nd .content {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .features .cta-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 6. Feedback (Đánh giá khách hàng) */
+  .feedback-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feedback-item .content {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* Cho màn hình cực nhỏ (iPhone 5/SE...) */
+@media (max-width: 480px) {
+  .hero .heading {
+    font-size: 2.8rem;
+  }
+
+  .hero .stats strong {
+    font-size: 3rem;
   }
 }
 
