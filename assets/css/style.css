@@ -214,6 +214,43 @@
   .blog .item .btn {
     margin: 15px auto 0;
   }
+  /* 7. Tối ưu riêng cho Footer trên Phone */
+  footer {
+    padding: 50px 20px 20px !important; /* Thu nhỏ padding lề */
+  }
+
+  .footer .row {
+    flex-direction: column !important; /* Chuyển từ hàng ngang sang hàng dọc */
+    gap: 40px; /* Tạo khoảng cách giữa các khối Company, Support, Address */
+    border-bottom: none !important; /* Bỏ gạch ngang lỗi thời trên mobile */
+  }
+
+  .footer .row .column,
+  .footer .row .column:first-child {
+    width: 100% !important; /* Ép tất cả các cột rộng 100% màn hình */
+  }
+
+  .footer .title {
+    padding-right: 0 !important;
+    display: block;
+    width: 100%;
+  }
+
+  .footer .list .address {
+    min-width: 100% !important; /* Xóa bỏ giới hạn độ rộng cũ */
+  }
+
+  .footer .list a {
+    display: block; /* Ép link dài như Email/Address chiếm trọn hàng */
+    word-break: break-all; /* Chống tràn chữ nếu email quá dài */
+    margin-bottom: 15px;
+  }
+
+  .footer .copyright {
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Tạo đường kẻ mảnh phân cách */
+  }
 }
 /* ============================ Web for computer ==================================== */
 * {
