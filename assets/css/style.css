@@ -194,29 +194,44 @@
   .features .cta-btn {
     margin: 25px auto 0 !important; /* Đảm bảo nút Sign Up nằm giữa */
   }
-
-  /* 6. Blog Section */
-  .blog .blog-list {
-    flex-direction: column;
-    align-items: center;
+  /* 8. Fix lỗi hiển thị Blog trên Mobile */
+  .blog .item {
+    width: 100% !important; /* Đảm bảo item chiếm hết chiều ngang */
+    max-width: 100% !important;
   }
 
-  .blog .item {
-    width: 100%;
-    max-width: 380px;
+  .blog .item .info {
+    padding: 20px !important; /* Tạo khoảng trống thoải mái cho nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung nếu bạn thích style center trên mobile */
     text-align: center;
   }
 
   .blog .item .date {
-    justify-content: center;
+    display: block !important; /* Chuyển về block để không bị gò bó chiều rộng */
+    width: 100% !important;
+    padding-bottom: 15px !important;
+  }
+
+  .blog .item .date::after {
+    /* Căn giữa lại thanh gạch chân trên mobile */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important; /* Độ dài thanh gạch chân vừa phải */
+    right: auto !important;
+  }
+
+  .blog .item .title {
+    font-size: 2rem !important; /* Tăng nhẹ size chữ để dễ đọc hơn trên điện thoại */
+    line-height: 1.5 !important;
+    width: 100% !important;
+    margin-top: 20px !important;
   }
 
   .blog .item .btn {
-    margin: 15px auto 0;
-  }
-  /* 7. Tối ưu riêng cho Footer trên Phone */
-  footer {
-    padding: 50px 20px 20px !important; /* Thu nhỏ padding lề */
+    width: fit-content !important; /* Nút bấm chỉ dài vừa đủ nội dung */
+    margin: 20px auto 0 !important; /* Căn giữa nút bấm */
   }
 
   .footer .row {
