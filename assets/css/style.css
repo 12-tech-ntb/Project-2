@@ -949,3 +949,91 @@ a {
   background: var(--primary-color);
   cursor: default;
 }
+
+/* ===============================Footer============================== */
+footer {
+  background: #b97903cf;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #fff;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+.footer .desc {
+  margin-top: 18px;
+  /* Để max-width để text có thể co lại phù hợp với thiết bị */
+  max-width: 235px;
+  color: #f7f5ea;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.footer .socials {
+  margin-top: 18px;
+  gap: 18px;
+  display: flex;
+}
+
+.footer .title {
+  padding-bottom: 14px;
+  padding-right: 48px;
+  border-bottom: 1px solid #efece2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+h3 {
+  /* Box chứa vừa với content */
+  display: inline-block;
+}
+
+.footer .list {
+  margin-top: 28px;
+}
+
+.footer .list a {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #f0eee4;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.footer .list .address {
+  min-width: 270px;
+}
+
+/* Tác động vào element li cuối cùng */
+.footer .list li:last-child {
+  margin-bottom: 0;
+}
+
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+
+.footer .copyright {
+  padding: 28px 0;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 1.86;
+}
